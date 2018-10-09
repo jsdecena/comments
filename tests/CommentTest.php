@@ -2,7 +2,7 @@
 
 namespace Jsdecena\Comments\Tests;
 
-use Jsdecena\Comments\repositories\PostRepository;
+use Jsdecena\Comments\Repositories\PostRepository;
 use Tests\TestCase;
 
 class CommentTest extends TestCase
