@@ -1,6 +1,6 @@
 <?php
 
-namespace Jsdecena\Comments\repositories;
+namespace Jsdecena\Comments\Repositories;
 
 use Illuminate\Support\Collection;
 use Jsdecena\Baserepo\BaseRepository;

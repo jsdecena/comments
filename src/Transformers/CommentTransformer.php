@@ -1,6 +1,6 @@
 <?php
 
-namespace Stormport\Package\comments\src\transformers;
+namespace Jsdecena\Comments\Transformers;
 
 use Jsdecena\Comments\Models\Comment;
 use Jsdecena\Comments\repositories\UserRepository;
