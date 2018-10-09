@@ -15,7 +15,8 @@ class CommentTransformer extends Fractal\TransformerAbstract
      */
     public function transform(Comment $comment)
     {
-        $userRepo = new UserRepository(config('comments.user'));
+        $class = config('comments.user');
+        $userRepo = new UserRepository(new $class);
 
         return [
             'id' => (int) $comment->id,
