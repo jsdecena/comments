@@ -2,6 +2,5 @@
 
 return [
     'user' => 'App\User',
-    'commentable_type' => 'App\User',
-    'commentable_id' => 1
+    'commentable_type' => 'App\User'
 ];
