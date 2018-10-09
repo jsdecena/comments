@@ -14,17 +14,9 @@ class CommentServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__ . '../database' => database_path()
-        ], 'comment-migrations');
-
-        $this->publishes([
-            __DIR__ . '../factories' => database_path('factories')
-        ], 'comment-config');
-
-        $this->publishes([
+            __DIR__ . '../database' => database_path(),
+            __DIR__ . '../factories' => database_path('factories'),
             __DIR__ . '../config' => base_path('config')
-        ], 'comment-config');
-
-        $this->loadMigrationsFrom(__DIR__ . '../database');
+        ], 'laravel-comment-files');
     }
 }
