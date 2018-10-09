@@ -3,9 +3,8 @@
 namespace Stormport\Package\comments\src\transformers;
 
 use Jsdecena\Comments\Models\Comment;
+use Jsdecena\Comments\repositories\UserRepository;
 use League\Fractal;
-use Stormport\Persons\Person;
-use Stormport\Persons\Repositories\PersonRepository;
 
 class CommentTransformer extends Fractal\TransformerAbstract
 {
@@ -13,11 +12,10 @@ class CommentTransformer extends Fractal\TransformerAbstract
      * @param Comment $comment
      *
      * @return array
-     * @throws \Stormport\Persons\Exceptions\PersonNotFoundErrorException
      */
     public function transform(Comment $comment)
     {
-        $userRepo = new PersonRepository(new Person);
+        $userRepo = new UserRepository(config('comments.user'));
 
         return [
             'id' => (int) $comment->id,
@@ -25,7 +23,7 @@ class CommentTransformer extends Fractal\TransformerAbstract
             'subtype' => $comment->subtype,
             'source' => $comment->source,
             'ip_address' => $comment->ip_address,
-            'user' => $userRepo->findPersonById($comment->user_id),
+            'user' => $userRepo->findUserById($comment->user_id),
             'created_at' => $comment->created_at,
             'updated_at' => $comment->updated_at
         ];

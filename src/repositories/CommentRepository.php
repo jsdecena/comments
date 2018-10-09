@@ -1,6 +1,6 @@
 <?php
 
-namespace Stormport\Package\comments\src\repositories;
+namespace Jsdecena\Comments\Repositories;
 
 use Jsdecena\Baserepo\BaseRepository;
 use Jsdecena\Comments\Models\Comment;
