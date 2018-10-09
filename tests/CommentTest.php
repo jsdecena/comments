@@ -3,9 +3,9 @@
 namespace Jsdecena\Comments\Tests;
 
 use Jsdecena\Comments\Repositories\PostRepository;
-use Tests\TestCase;
+use Tests\BaseTestCase;
 
-class CommentTest extends TestCase
+class CommentTest extends BaseTestCase
 {
     /** @test */
     public function it_can_list_the_comments_on_a_post()

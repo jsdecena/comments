@@ -7,7 +7,7 @@ use Faker\Provider\Lorem;
 use Jsdecena\Comments\Tests\Post;
 use Jsdecena\Comments\Tests\User;
 
-abstract class TestCase extends \Orchestra\Testbench\TestCase
+abstract class BaseTestCase extends \Orchestra\Testbench\TestCase
 {
     protected $faker;
     protected $user;
